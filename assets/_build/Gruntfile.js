@@ -9,9 +9,12 @@ module.exports = function(grunt) {
 
 	// Project configuration.
 	grunt.initConfig({
+
 		//Read the package.json (optional)
 		pkg: grunt.file.readJSON('package.json'),
 
+
+		//triggered on saves
 		watch: {
 			sass : {
 				files: ['../scss/**/*'],
@@ -77,7 +80,7 @@ module.exports = function(grunt) {
 				}]
 			}
 		},
-
+		// take autoprefixer css and minify
 		cssmin: {
 			options: {
 				sourceMap: true
@@ -90,13 +93,32 @@ module.exports = function(grunt) {
 
 		browserSync: {
 			dev: {
+				// Options passed to Chokidar
+				watchOptions: {
+				    ignoreInitial: true,
+				    ignored: '*.map'
+				},
+
+				// options for chokidar with custom callback
+				// since 2.6.0
+				files: [
+				    {
+				        match: ["**/*.map"],
+				        fn: function (event, file) {
+				            /** Custom event handler **/
+				        },
+				        options: {
+				            ignored: '*.map'
+				        }
+				    }
+				],
 				bsFiles: {
 					src : [
 						"../css/**/*.css",
-						"../css/**/*.map",
+						//"../css/**/*.map",
 						"../images/**/*.jpg",
 						"../images/**/**/*.png",
-						"../js/**/*.js",
+						//"../js/**/*.js",
 						"**/*.php",
 						"**/*.html"
 					]
