@@ -137,7 +137,7 @@ module.exports = function(grunt) {
 		} // browserSync
 
 	});
-
+	require('time-grunt')(grunt);
 	grunt.loadNpmTasks('grunt-newer');
 	// Default tasks (runs them all at start to catch any updates from version control)
 	grunt.registerTask("default", ["browserSync","watch"]);
