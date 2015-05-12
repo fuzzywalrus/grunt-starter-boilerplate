@@ -24,7 +24,7 @@ module.exports = function(grunt) {
 					files: ["Gruntfile.js"]
 			},
 			js : {
-				files: ['../scss/**/*', '../js/components/**/*'],
+				files: ['../js/vendor/**/*', '../js/components/**/*'],
 				tasks : ["jshint","jscs","uglify"]
 			}
 		},
@@ -68,10 +68,10 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-
+		//docs https://github.com/nDmitry/grunt-autoprefixer
 		autoprefixer: {
 			options: {
-				browsers: ["last 2 version", "ie 8", "ie 9"]
+				browsers: ["last 2 version", "ie 8", "ie 9", "FireFox > 4", "Safari > 3"]
 			},
 			dist: {
 				files: [{
@@ -91,6 +91,7 @@ module.exports = function(grunt) {
 			}
 		},
 
+		//docs http://www.browsersync.io/docs/grunt/
 		browserSync: {
 			dev: {
 				// Options passed to Chokidar
@@ -115,10 +116,10 @@ module.exports = function(grunt) {
 				bsFiles: {
 					src : [
 						"../css/**/*.css",
-						//"../css/**/*.map",
+						"../css/**/*.map",
 						"../images/**/*.jpg",
 						"../images/**/**/*.png",
-						//"../js/**/*.js",
+						"../js/**/*.js",
 						"**/*.php",
 						"**/*.html"
 					]
@@ -137,7 +138,7 @@ module.exports = function(grunt) {
 
 	});
 
-	
+	grunt.loadNpmTasks('grunt-newer');
 	// Default tasks (runs them all at start to catch any updates from version control)
 	grunt.registerTask("default", ["browserSync","watch"]);
 	
