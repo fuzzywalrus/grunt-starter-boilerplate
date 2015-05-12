@@ -15,7 +15,7 @@ The programmed watch files are for: Sass, Gruntfile.js and JS changes.
 
 This does not include:
 * Popular front end frameworks or other boilerplates as it is designed to be platform agnostic. This will work with Bootstrap Sass and many others.
-* Compass (for now) as there's a speed penalty for using compass, frameworks like Foundation or Sass libraries like Suzy require compass. I may make a compass alternative for those who need it.
+* Support for Compass. There are compelling options for Libsass including Compass Importer and Compass Mixins.
 
 The idea is to make a grunt project that encompasses common workflow, ready to go for vets and newbies alike.
 
@@ -35,4 +35,13 @@ Next you'll need to configure your local webserver and within your /assets/_buil
 Once your local webserver has been configured, you're ready to rock! From the terminal in your /assets/_build directory, run "Grunt", this will launch a browser window pointing to your localhost and will start compiling. If your browser has been configured properly, you should see the Hello World text. Congrats!
 
  To stop your project, hit command-period  (OS X) on your terminal window. Anytime you hit save on a Scss file or JS file, grunt will recompile your changes. 
+ 
+##Compass For The People!
+
+Want compass support? Go to the package.json, add:
+"grunt-contrib-sass": "^0.9.2",
+
+And remove:
+"grunt-sass": "^1.0.0", 
+
 
