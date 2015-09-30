@@ -120,8 +120,8 @@ module.exports = function(grunt) {
 						"../images/**/*.jpg",
 						"../images/**/**/*.png",
 						"../js/**/*.js",
-						"**/*.php",
-						"**/*.html"
+						"../**/*.php",
+						"../**/*.html"
 					]
 				},
 				options: {
