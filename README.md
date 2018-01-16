@@ -40,6 +40,10 @@ On launch BrowserSync does some awesome stuff out of the box, allowing you to ac
 
  To stop your project, hit command-period  (OS X) on your terminal window. Anytime you hit save on a Scss file or JS file, grunt will recompile your changes. 
  
+## Looking for gulp?
+
+I've created a boilerplate for gulp as well! (Check it out here!)[https://github.com/fuzzywalrus/Gulp-Sass-JS-BrowserSync-Boilerplate]
+ 
 ## Compass For The People!
 
 Want compass support? Go to the package.json, add:
