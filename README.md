@@ -42,7 +42,7 @@ On launch BrowserSync does some awesome stuff out of the box, allowing you to ac
  
 ## Looking for gulp?
 
-I've created a boilerplate for gulp as well! (Check it out here!)[https://github.com/fuzzywalrus/Gulp-Sass-JS-BrowserSync-Boilerplate]
+I've created a boilerplate for gulp as well! [Check it out here!](https://github.com/fuzzywalrus/Gulp-Sass-JS-BrowserSync-Boilerplate).
  
 ## Compass For The People!
 
